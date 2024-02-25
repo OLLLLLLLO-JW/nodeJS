@@ -41,7 +41,6 @@ const main = async () => {
 const updateMethod = async (dbClient, colName, searchFilter, replaceString) => {
 	const collection = dbClient.collection(colName)
 	const filter = searchFilter
-	const options = ''
 	try {
 		const result = await collection.updateOne(filter, {
 			$set: { name: ['Laren Mike', 'new name here'] }
